@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-node-reload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Restart Gatsby automatically when gatsby-node (and others) changes",
   "main": "index.js",
   "repository": "https://github.com/d4rekanguok/gatsby-plugin-node-reload.git",
