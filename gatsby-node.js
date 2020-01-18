@@ -19,13 +19,13 @@ const restartProcess = ({ reporter }) => {
 
 let watcher
 
-exports.onPreInit = ({ reporter }, options) => {
+exports.onPreInit = ({ reporter }, { watch = [] }) => {
   reporter.info(`[${PLUGIN_NAME}] cmd+C will not work! Use 'kill -15 ${process.pid}' to kill this process.`)
   reporter.info(`PID: ${process.pid}`)
   reporter.info(`PID: ${process.pid}`)
   reporter.info(`PID: ${process.pid}`)
 
-  watcher = chokidar.watch(['./gatsby-*', ...options.watch])
+  watcher = chokidar.watch(['./gatsby-*', ...watch])
   watcher.on('add', (path) => {
     reporter.info(`[${PLUGIN_NAME}] add ${path}`)
   })
