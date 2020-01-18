@@ -20,6 +20,8 @@ const restartProcess = ({ reporter }) => {
 let watcher
 
 exports.onPreInit = ({ reporter }, { watch = [] }) => {
+  if (process.env.NODE_ENV !== 'development') return
+
   reporter.info(`[${PLUGIN_NAME}] cmd+C will not work! Use 'kill -15 ${process.pid}' to kill this process.`)
   reporter.info(`PID: ${process.pid}`)
   reporter.info(`PID: ${process.pid}`)
@@ -33,6 +35,8 @@ exports.onPreInit = ({ reporter }, { watch = [] }) => {
 
 
 exports.onPostBootstrap = ({ reporter }) => {
+  if (process.env.NODE_ENV !== 'development') return
+
   watcher.on('change', path => {
     restartProcess({ reporter })
   })
