@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-plugin-node-reload",
+  "version": "1.0.0",
+  "description": "Restart Gatsby automatically when gatsby-node (and others) changes",
+  "main": "index.js",
+  "repository": "https://github.com/d4rekanguok/gatsby-plugin-node-reload.git",
+  "author": "Derek Nguyen <derek@penandpillow.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^3.3.1"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.9.2"
+  }
+}
