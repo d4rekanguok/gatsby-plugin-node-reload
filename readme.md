@@ -1,3 +1,5 @@
+![gatsby-plugin-node-reload](assets/gatsby-plugin-node-reload.png)
+
 # Gatsby Reload
 
 Restart Gatsby's process when `gatsby-*` files changes (`gatsby-node`, `gatsby-config`, `gatsby-browser`, and `gatsby-ssr`).
